@@ -44,10 +44,10 @@ Those are skills you can take to a job interview.
 Good luck!
 
 ## Can I complete the Cloud Resume Challenge on Microsoft Azure?
-[Yes, you can!](azure/cloud-resume-challenge.md)
+[Yes, you can!](projects/azure/cloud-resume-challenge.md)
 
 ## Can I complete the Cloud Resume Challenge on Google Cloud (GCP)?
-[Absolutely!](google-cloud/cloud-resume-challenge.md)
+[Absolutely!](projects/google-cloud/cloud-resume-challenge.md)
 
 ## Can I complete the challenge using [different technology X]?
 
