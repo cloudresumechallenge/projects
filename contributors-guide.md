@@ -14,7 +14,7 @@ It's time for a meta-challenge: if you've built or benefited from the Cloud Resu
 
 Cloud Resume Challenge extensions build on the core resume site to give additional hands-on practice with cloud development, automation, or architecture. We are always looking for more extensions to the challenge!
 
-If you would like to contribute a challenge, copy the following markdown into a new file. Update the placeholder text in brackets with the elements of your challenge, then pull request it to the "Extensions" sections of the docs.
+If you would like to contribute a challenge, copy the following markdown into a new file. Update the placeholder text in brackets with the elements of your challenge, then pull request it to the appropriate folder in the ["projects" section](https://github.com/cloudresumechallenge/projects/tree/main/projects) of the repo.
 
 | Challenge name | Cloud(s) | Challenge goal | Contributor |
 | :--- | :--- | :--- | :--- |
