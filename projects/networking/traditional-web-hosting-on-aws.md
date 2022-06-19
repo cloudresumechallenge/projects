@@ -4,7 +4,7 @@ title: "Traditional Web Hosting on AWS"
 
 | Challenge name | Cloud(s) | Challenge goal | Contributor |
 | :--- | :--- | :--- | :--- |
-| Traditional Web Hosting on AWS | AWS | Understand how to run your application in a traditional web architecture | [@tonytalkstech](https://twitter.com/tonytalkstech) |
+| Traditional Web Hosting on AWS | AWS | Understand how to run your application in a traditional web architecture | [@tonytalkstech](https://twitter.com/tonytalkstech) and [@loujaybee](https://twitter.com/loujaybee) |
 
 ### Intro
 
