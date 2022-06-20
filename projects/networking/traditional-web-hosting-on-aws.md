@@ -8,8 +8,6 @@ title: "Traditional Web Hosting on AWS"
 
 ### Intro
 
-_Note: I feel like there's an opportunity to discuss IaaS vs. Saas/PaaS here, but I'm not sure if it's a useful conversation. It may help the following paragraphs, as I want to walk away from the "serverless" moniker and replace it with SaaS or Paas. Thoughts are welcome here!_
-
 The Cloud Resume Challenge uses many serverless technologies, such as Lambda and S3. This focus on serverless allows the challenger to focus on the application and delivery details without having to be bogged down with operational concerns, which is great! Delivering an application to the cloud is one of the most important skills to learn.
 
 Many companies utilize a number of traditional technologies within AWS to deliver applications, most of which are less managed than the serverless technologies. These include [Elastic Cloud Compute (EC2)](https://docs.aws.amazon.com/ec2/index.html), which provides virtual machines in AWS, and [Virtual Private Cloud (VPC)](https://docs.aws.amazon.com/vpc/index.html), which provides virtual networking constructs in AWS.
