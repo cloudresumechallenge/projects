@@ -1,3 +1,7 @@
+| Challenge name | Cloud(s) | Challenge goal | Contributor |
+| :--- | :--- | :--- | :--- |
+| Terraform Your Web App | AWS | Using any language you prefer, write code that creates an EC2 instance running a basic web application in Docker using a single command from the user. | [r/ExperiencedDevOps mods](https://www.reddit.com/r/ExperiencedDevOps/) |
+
 ## CHALLENGE
 
 Using any language you prefer, write code that creates an EC2 instance running a basic web application in Docker using a single command from the user.
