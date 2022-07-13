@@ -15,14 +15,15 @@ Some familiarity with CloudFormation or a similar tool would be helpful. Note th
 * Here’s [a recent post on the AWS Architecture Blog](https://aws.amazon.com/blogs/architecture/field-notes-use-aws-cloud9-to-power-your-visual-studio-code-ide/) that might give you some ideas 
 
 ## Challenge steps
-1. Cloud9 initial exploration
+
+### Cloud9 initial exploration
 If you have never tried Cloud9, go ahead and click through the console setup for an "EC2" environment, and get a feel for what it does. Notice how the system will "stop" after being idle for a while (so you’re not paying for CPU+RAM while it’s stopped), and then auto-starts when you resume work.
 
 Read Jared Short's blog post, and try to absorb the view of Cloud9 environments as temporary and easily replaced.
 
 Don't forget to destroy the environment (and all the resources you use) when you're done! The console is convenient, but gets tiresome if you recreate an environment frequently, so we’ll quickly move on to better automation.
 
-2. Simple template
+### Simple template
 The CloudFormation `AWS::Cloud9::EnvironmentEC2` resource is pretty simple. You can start out really just specifying the instance type, so do that!
 
 There’s [a fairly complicated and slightly out of date template](https://github.com/aws-samples/aws-cloud9-bootstrapping-example/) available, but you can start out with a very minimal one. Make sure you check the CloudFormation documentation for `AWS::Cloud9::EnvironmentEC2` for the current available parameters.
