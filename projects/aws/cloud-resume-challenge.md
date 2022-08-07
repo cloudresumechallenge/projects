@@ -32,7 +32,7 @@ Point a custom DNS domain name to the CloudFront distribution, so your resume ca
 Your resume webpage should include a visitor counter that displays how many people have accessed the site. You will need to write a bit of [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) to make this happen. Here is a [helpful tutorial](https://www.codecademy.com/learn/introduction-to-javascript) to get you started in the right direction.
 
 ## 8. Database
-The visitor counter will need to retrieve and update its count in a database somewhere. I suggest you use Amazon's [DynamoDB](https://aws.amazon.com/dynamodb/) for this. (Use on-demand pricing for the database and you'll pay essentially nothing, unless you store or retrieve much more data than this project requires.) Here is a [great free course](https://linuxacademy.com/course/dynamo-db-deep-dive/) on DynamoDB.
+The visitor counter will need to retrieve and update its count in a database somewhere. I suggest you use Amazon's [DynamoDB](https://aws.amazon.com/dynamodb/) for this. (Use on-demand pricing for the database and you'll pay essentially nothing, unless you store or retrieve much more data than this project requires.) Here is a [great free course](https://acloudguru.com/course/amazon-dynamodb-deep-dive) on DynamoDB (requires a free account).
 
 ## 9. API
 Do not communicate directly with DynamoDB from your Javascript code. Instead, you will need to create an [API](https://medium.com/@perrysetgo/what-exactly-is-an-api-69f36968a41f) that accepts requests from your web app and communicates with the database. I suggest using AWS's API Gateway and Lambda services for this. They will be free or close to free for what we are doing. 
