@@ -38,7 +38,7 @@ The contact form should be able to store the addresses in a database. We suggest
 
 ## 8. API
 
-Do not communicate directly with Redis from your Javascript code. Instead, you will need to create an [API](https://medium.com/@perrysetgo/what-exactly-is-an-api-69f36968a41f) that accepts requests from your web app and communicates with the database. I suggest using AppPlatform and DigitalOcean Functions services for this. They will be free or close to free for what we are doing.
+Do not communicate directly with MongoDB from your Javascript code. Instead, you will need to create an [API](https://medium.com/@perrysetgo/what-exactly-is-an-api-69f36968a41f) that accepts requests from your web app and communicates with the database. I suggest using AppPlatform and DigitalOcean Functions services for this. They will be free or close to free for what we are doing.
 
 ## 9. Python
 
@@ -50,7 +50,7 @@ You should also include some tests for your Python code. [Here are some resource
 
 ## 11. Infrastructure as Code
 
-You should not be configuring your API resources -- the Redis table, the AppPlatform Static Site, the Function -- manually, by clicking around in the DigitalOcean console. Instead, define them in an [AppPlatform App Specification](https://docs.digitalocean.com/products/app-platform/reference/app-spec/) template and deploy them using the [DigitalOcean Command Line Tool](https://docs.digitalocean.com/reference/doctl/). This is called "[infrastructure as code](https://www.hashicorp.com/resources/what-is-infrastructure-as-code/)" or IaC. It saves you time in the long run.
+You should not be configuring your API resources -- the MongoDB table, the AppPlatform Static Site, the Function -- manually, by clicking around in the DigitalOcean console. Instead, define them in an [AppPlatform App Specification](https://docs.digitalocean.com/products/app-platform/reference/app-spec/) template and deploy them using the [DigitalOcean Command Line Tool](https://docs.digitalocean.com/reference/doctl/). This is called "[infrastructure as code](https://www.hashicorp.com/resources/what-is-infrastructure-as-code/)" or IaC. It saves you time in the long run.
 
 ## 12. CI/CD
 
