@@ -6,7 +6,7 @@ title = "The Cloud Resume Challenge - OCI"
 
 | Challenge name | Cloud(s) | Challenge goal | Contributor |
 | :--- | :--- | :--- | :--- |
-| The Cloud Resume Challenge | OCI | "Create a portfolio site that shows off your cloud and DevOps skills." | [@forrestbrazeal](https://twitter.com/forrestbrazeal) |
+| The Cloud Resume Challenge | OCI | "Create a portfolio site that shows off your cloud and DevOps skills." | [Graham-Baggett](https://github.com/Graham-Baggett) |
 
 ## 1. Certification
 
@@ -53,4 +53,6 @@ Set up [GitHub Actions](https://help.github.com/en/actions/getting-started-with-
 Create a second GitHub repository for your website code. Create GitHub Actions such that when you push new website code, the Object Storage bucket automatically gets updated.  *Important note: DO NOT commit OCI keys or fingerprints to source control! Bad hats will find them and use them against you!*
 
 ## 15. Blog post
-Finally, in the text of your resume, you should link a short blog post describing some things you learned while working on this project. [LinkedIn](https://www.linkedin.com/feed/) is a nice place to publish if you don't have your own blog.
+Finally, you should write a short blog post describing some things you learned while working on this project. [LinkedIn](https://www.linkedin.com/feed/) is a nice place to publish if you don't have your own blog.
+
+Congratulations on completing the OCI Cloud Resume Challenge! I encourage you to keep learning and find new ways to utilize your Cloud and DevOps skills.
