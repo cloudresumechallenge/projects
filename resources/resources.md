@@ -6,7 +6,7 @@ description: "Resources curated from the community to help you crush the Cloud R
 Have you created an awesome tutorial video or blog about the Cloud Resume Challenge that should be in this repository? Have you created your own challenge prompt using the Cloud Resume Challenge format? Feel free to submit a pull request!
 
 ### The Cloud Resume Challenge Book
-The [definitive resource](/book) for crushing the challenge and getting hired in cloud. Includes four additional challenges - two on AWS, one on Kubernetes / Google Cloud, and one that touches all three cloud providers.
+The [definitive resource](https://cloudresumechallenge.dev/book/) for crushing the challenge and getting hired in cloud. Includes four additional challenges - two on AWS, one on Kubernetes / Google Cloud, and one that touches all three cloud providers.
 
 ### The Cloud Resume Challenge Discord Server
 This is the place to be if you are working on the challenge. Join ~4000 other cloud enthusiasts ranging from beginners to experienced mentors. Ask your challenge questions, get code review, view cloud job postings, or just chat about cloud and life. It's free and very chill. What more reason do you need? [Join us already](https://discord.gg/2PTwAth).
