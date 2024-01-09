@@ -1,24 +1,34 @@
 | Challenge name | Cloud(s) | Challenge goal | Contributor |
 | :--- | :--- | :--- | :--- |
-| ["Securing Your Software Supply Chain"] | [Google Cloud, AWS] | [1-2 sentences describing the learning objectives of this project - why might hiring managers be impressed by this project?] | [Your name or Github handle (feel free to link to your blog / twitter /etc )] |
+| Sending Updated Visitor Count to All Clients | AWS | In this challenge, you will build an event-driven architecture for your visitor-count service using DynamoDB Streams. Then, you will learn a mechanism to push updates to your clients using web sockets. | [Kaung Si Thu](https://www.linkedin.com/in/kaungsithu-kst/) |
 
-### Challenge Guide
-1. [Prerequisites: provide a short bullet list with download links/setup guides to any major languages, tools or frameworks learners will need to use in this project]
+## Introduction
+The design of an HTTP/REST API is that you can do one request/response cycle with one API call. This leaves the visitors to your website with an old value of visitor count unless they refresh your website or unless your web app does polling. However, periodic polling will periodically invoke your Lambda functions and will cost you more than what you would like. Here, we will invoke our Lambda functions only when we need them while achieving the goal of updating the visitor count to all clients. The following is the diagram you can refer back to in case you are stuck during your challenge:
 
-1. [Diagram: Provide a small diagram showing the cloud services used in the project and how they fit together. This can be high-level/ conceptual]
+![Alt text](images/realtime-counter.png)
 
-1. Challenge steps
+## Prerequisites
+This challenge assumes that the challenger has already done the original cloud resume challenge. All we will be changing is the design of the visitor count service and the interaction between our web app and the new service.
 
-Now you will provide the steps of the challenge one by one.
-* There should be around 6 to 12 steps - no more than 15.
-* Each step gives the user a task to do, like connect a database to a BI service.
-* The steps can link to helpful guides or tutorials, but you shouldn’t explain every single action the user needs to complete in order to complete the step.
-* The learner is expected to be able to Google to figure out some things throughout the project.
-You’re not creating a step-by-step tutorial; you’re providing a spec, it’s up to them to figure out exactly how to implement it.
-* The last step of the challenge should ALWAYS be for them to write a short blog post explaining what they learned.
+## Challenge steps
 
-4. [Extra credit (optional): Provide 2-3 additional tweaks to the challenge for “extra credit”. Common ideas are: add CI/CD, add a front-end dashboard, etc]
+1. Delete your existing REST/HTTP API Gateway.
+2. Delete your existing Lambda Functions. They could be in the form of GET and PUT Lambda Functions that interact with the visitor count table. 
+3. Create a new WebSocket API Gateway, a new Lambda function (refer to this as DBUpdater), and a new DynamoDB table (refer to this as ConnectionIDs).
+4. Write your web app to connect to this WebSocket API Gateway upon loading. 
+5. Route WebSocket's $connect and $disconnect routes to DBUpdater. 
+6. DBUpdater, upon $connect, should write the connection ID of the web socket connection from the web app to the ConnectionIDs table, and increase the visitor count in the visitor count table. Upon $disconnect, the function should only delete the connection's ID from connectionID. [Hint: You might want to play with the event sent to DBUpater from WebSocket]
+7. Enable DynamoDB Steams in the visitor count table. Therefore, a visitor will trigger this DynamoDB Stream because DBUpdater modifies the visitor count inside the table.
+8. Create another Lambda Function (refer to this as DBStreamProcessor), and make the DynamoDB Stream to invoke this DBStreamProcessor.
+9. DBStreamProcessor should scan the connection IDs inside the ConnectionIDs table and send the updated count through WebSocket.
+10. Update your web app to listen to the socket and display the updated count!
+11. Write a short blog on the programming languages and the SDKs you use in the Lambda functions and what you learn about what web sockets are capable of.
 
-5. How to use this challenge in a job interview
+## Conclusion
 
-[Provide a paragraph or two explaining why this challenge is relevant for people looking to enhance their cloud skills. Give them a rousing call to action and wish them good luck!]
+The challenge provides hands-on experience with AWS services, showcasing the power of event-driven architectures and WebSocket communication to achieve real-time updates for visitor counts cost-effectively.
+
+
+
+
+
