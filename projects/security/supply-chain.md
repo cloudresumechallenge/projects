@@ -18,6 +18,7 @@ In this challenge, you'll extend your Cloud Resume Challenge project to add prot
 * Take a whirl through the Cloud Native Computing Foundation's [software supply chain repo](https://github.com/cncf/tag-security), particularly the [compromise definitions](https://github.com/cncf/tag-security/blob/main/supply-chain-security/compromises/compromise-definitions.md) and the [whitepaper](https://github.com/cncf/tag-security/blob/main/supply-chain-security/supply-chain-security-paper/CNCF_SSCP_v1.pdf).
 * Here's [a helpful video](https://www.youtube.com/watch?v=7CMhIDAPjEs&t=876s) walking through supply chain attacks in the Kubernetes ecosystem.
 * Get familiar with [GitHub's security features](https://docs.github.com/en/code-security/getting-started/github-security-features); a decent percentage of real-world software supply chain protection is just "turning the right knobs in GitHub", it seems.
+* Supply chain Levels for Software Artifacts (SLSA) provides information around supply chain threats and best practices. There is also a cool badge for your repository. Read more at [slsa.dev](https://slsa.dev/) and their [quick start guide](https://slsa.dev/get-started)
 
 ### Challenge steps
 
