@@ -50,7 +50,6 @@ Before you embark on this journey, ensure you are equipped with:
    - Use `php:7.4-apache` as the base image.
    - Install `mysqli` extension for PHP.
    - Copy the application source code to `/var/www/html/`.
-   - Update database connection strings to point to a Kubernetes service named `mysql-service`.
    - Expose port `80` to allow traffic to the web server.
 
 2. **Build and Push the Docker Image**:
