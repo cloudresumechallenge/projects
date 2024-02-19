@@ -61,6 +61,9 @@ Before you embark on this journey, ensure you are equipped with:
 
 - **Database Preparation**: Instead of containerizing the database yourself, you'll use the official MariaDB image. Prepare the database initialization script (`db-load-script.sql`) to be used with Kubernetes ConfigMaps or as an entrypoint script.
 
+```markdown
+> **Note:** The instructions outlined above are meant to guide you through the process of containerizing and deploying this e-commerce application. However, these steps are not prescriptive. You are encouraged to adapt, modify, or even completely rethink these steps to better suit your specific project requirements and deployment strategies. Exploring alternative approaches is highly recommended to find the best fit for your needs.
+```
 ### Step 3: Set Up Kubernetes on a Public Cloud Provider
 
 - **Cluster Creation**: Choose AWS (EKS), Azure (AKS), or GCP (GKE) and follow their documentation to create a Kubernetes cluster. Ensure you have `kubectl` configured to interact with your cluster.
