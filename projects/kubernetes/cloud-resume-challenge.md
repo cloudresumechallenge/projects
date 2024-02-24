@@ -98,11 +98,11 @@ Before you embark on this journey, ensure you are equipped with:
 
 **Task**: Update the website to include a new promotional banner for the marketing campaign.
 
-1. **Update Application**: Modify the web application's code to include the promotional banner.
-2. **Build and Push New Image**: Build the updated Docker image as `yourdockerhubusername/ecom-web:v2` and push it to Docker Hub.
-3. **Rolling Update**: Update `website-deployment.yaml` with the new image version and apply the changes.
-4. **Monitor Update**: Use `kubectl rollout status deployment/ecom-web` to watch the rolling update process.
-5. **Outcome**: The website updates with zero downtime, demonstrating rolling updates' effectiveness in maintaining service availability.
+- **Update Application:** Revise your web application to feature the new promotional banner, aligning with your marketing strategy.
+- **Refresh Docker Image:** After updating the application, create a new Docker image to reflect these changes, tagging it as a new version to differentiate it from the previous one.
+- **Deploy Updated Version:** Apply the updated version to your deployment, initiating a rolling update. This method ensures a seamless transition with no downtime, as new instances replace the old ones gradually.
+- **Monitor Deployment:** Keep an eye on the update process, ensuring it progresses without issues and that the new version is successfully deployed across all instances.
+- **Outcome**: The website updates with zero downtime, demonstrating rolling updates' effectiveness in maintaining service availability.
 
 ### Step 9: Roll Back a Deployment
 
