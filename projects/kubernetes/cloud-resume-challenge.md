@@ -80,11 +80,10 @@ Before you embark on this journey, ensure you are equipped with:
 
 **Task**: Add a feature toggle to the web application to enable a "dark mode" for the website.
 
-1. **Modify the Web Application**: Add a simple feature toggle in the application code (e.g., an environment variable `FEATURE_DARK_MODE` that enables a CSS dark theme).
-2. **Use ConfigMaps**: Create a ConfigMap named `feature-toggle-config` with the data `FEATURE_DARK_MODE=true`.
-3. **Deploy ConfigMap**: Apply the ConfigMap to your Kubernetes cluster.
-4. **Update Deployment**: Modify the `website-deployment.yaml` to include the environment variable from the ConfigMap.
-5. **Outcome**: Your website should now render in dark mode, demonstrating how ConfigMaps manage application features.
+- **Enhance Application:** Add a feature toggle in the application for "dark mode" through an environment variable.
+- **Use ConfigMaps:** Utilize ConfigMaps to manage the feature toggle's state, simplifying configuration changes.
+- **Deployment Integration:** Include this configuration in your deployment strategy, making it easy to activate the feature toggle.
+- **Outcome**: Your website should now render in dark mode, demonstrating how ConfigMaps manage application features.
 
 ### Step 7: Scale Your Application
 
