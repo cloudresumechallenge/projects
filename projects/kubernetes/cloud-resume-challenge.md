@@ -108,10 +108,10 @@ Before you embark on this journey, ensure you are equipped with:
 
 **Task**: Suppose the new banner introduced a bug. Roll back to the previous version.
 
-1. **Identify Issue**: After deployment, monitoring tools indicate a problem affecting user experience.
-2. **Roll Back**: Execute `kubectl rollout undo deployment/ecom-web` to revert to the previous deployment state.
-3. **Verify Rollback**: Ensure the website returns to its pre-update state without the promotional banner.
-4. **Outcome**: The application's stability is quickly restored, highlighting the importance of rollbacks in deployment strategies.
+- **Identify Issue:** Notice an issue post-deployment through monitoring tools or user feedback, indicating a negative impact on the user experience.
+- **Initiate Rollback:** Revert to the previous version of your deployment. This action undoes the recent update, restoring the application to its former state before the problematic changes were introduced.
+- **Confirm Rollback Success:** Ensure that the application has returned to its prior state, with stability restored and the new banner removed, thus eliminating the introduced bug.
+- **Outcome**: The application's stability is quickly restored, highlighting the importance of rollbacks in deployment strategies.
 
 ### Step 10: Autoscale Your Application
 
