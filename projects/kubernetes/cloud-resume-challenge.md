@@ -117,11 +117,11 @@ Before you embark on this journey, ensure you are equipped with:
 
 **Task**: Automate scaling based on CPU usage to handle unpredictable traffic spikes.
 
-1. **Implement HPA**: Create a Horizontal Pod Autoscaler targeting 50% CPU utilization, with a minimum of 2 and a maximum of 10 pods.
-2. **Apply HPA**: Execute `kubectl autoscale deployment ecom-web --cpu-percent=50 --min=2 --max=10`.
-3. **Simulate Load**: Use a tool like Apache Bench to generate traffic and increase CPU load.
-4. **Monitor Autoscaling**: Observe the HPA in action with `kubectl get hpa`.
-5. **Outcome**: The deployment automatically adjusts the number of pods based on CPU load, showcasing Kubernetes' capability to maintain performance under varying loads.
+- **Setup Autoscaling:** Introduce a Horizontal Pod Autoscaler (HPA) configured to maintain around 50% CPU utilization across your application pods. Define a range for the number of pods allowed, setting a minimum and maximum to ensure resource availability aligns with demand.
+- **Implement HPA:** Apply the autoscaling configuration to your deployment, specifying the desired CPU utilization percentage and pod count limits. This ensures your application scales up or down automatically based on real-time CPU usage.
+- **Traffic Load Simulation:** Generate increased traffic to your application, using load testing tools. This spike in usage will trigger the autoscaling mechanism, pushing the CPU usage beyond the defined threshold.
+- **Monitoring Scaling Effectiveness:** Keep an eye on the autoscaling process, monitoring how the HPA adjusts the number of pods in response to the current load. This observation helps verify the autoscaler's responsiveness and efficiency.
+- **Outcome**: The deployment automatically adjusts the number of pods based on CPU load, showcasing Kubernetes' capability to maintain performance under varying loads.
 
 ### Step 11: Implement Liveness and Readiness Probes
 
