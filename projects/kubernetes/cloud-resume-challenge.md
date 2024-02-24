@@ -46,7 +46,7 @@ Before you embark on this journey, ensure you are equipped with:
 
 #### A. Web Application Containerization
 
-##### 1. Creating a Dockerfile
+##### 1. Creating a Dockerfile for the Web App
 - This Dockerfile should base itself on a specific web server image. It must include necessary extensions, your application's source code, configurations for database connections to align with a named Kubernetes service, and the port the web server listens on for web traffic.
 
 ##### 2. Building and Pushing Docker Image
