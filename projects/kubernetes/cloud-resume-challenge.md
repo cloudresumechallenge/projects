@@ -127,10 +127,10 @@ Before you embark on this journey, ensure you are equipped with:
 
 **Task**: Ensure the web application is restarted if it becomes unresponsive and doesn’t receive traffic until ready.
 
-1. **Define Probes**: Add liveness and readiness probes to `website-deployment.yaml`, targeting an endpoint in your application that confirms its operational status.
-2. **Apply Changes**: Update your deployment with the new configuration.
-3. **Test Probes**: Simulate failure scenarios (e.g., manually stopping the application) and observe Kubernetes' response.
-4. **Outcome**: Kubernetes automatically restarts unresponsive pods and delays traffic to newly started pods until they're ready, enhancing the application's reliability and availability.
+- **Define Probes:** Integrate liveness and readiness probes into your deployment configuration. These should target specific endpoints within your application that accurately reflect its health and readiness to handle traffic.
+- **Apply Configuration Updates:** Refresh your deployment with the updated settings, introducing the probes to actively monitor the application's state.
+- **Probe Testing:** Conduct tests by simulating scenarios that would affect the application's performance or availability. Observe how Kubernetes responds to these conditions, ensuring that it restarts or withholds traffic from the application as designed.
+- **Outcome**: Kubernetes automatically restarts unresponsive pods and delays traffic to newly started pods until they're ready, enhancing the application's reliability and availability.
 
 ### Step 12: Utilize ConfigMaps and Secrets
 
