@@ -42,28 +42,19 @@ Before you embark on this journey, ensure you are equipped with:
 
 **KodeKloud CKAD Course**: To ensure you have a solid understanding of Kubernetes concepts and practical experience, complete the [Certified Kubernetes Application Developer (CKAD) course by KodeKloud](https://www.kodekloud.com/p/kubernetes-certification-course). This course will equip you with the knowledge and skills needed to tackle this challenge effectively.
 
-### Step 2: Containerize Your E-Commerce Website and Database
+### Step 2: Containerizing Your E-Commerce Website and Database
 
 #### A. Web Application Containerization
 
-1. **Create a Dockerfile**: Navigate to the root of the e-commerce application and create a Dockerfile. This file should instruct Docker to:
-   - Use `php:7.4-apache` as the base image.
-   - Install `mysqli` extension for PHP.
-   - Copy the application source code to `/var/www/html/`.
-   - Expose port `80` to allow traffic to the web server.
+##### 1. Creating a Dockerfile
+- This Dockerfile should base itself on a specific web server image. It must include necessary extensions, your application's source code, configurations for database connections to align with a named Kubernetes service, and the port the web server listens on for web traffic.
 
-2. **Build and Push the Docker Image**:
-   - Execute `docker build -t yourdockerhubusername/ecom-web:v1 .` to build your image.
-   - Push it to Docker Hub with `docker push yourdockerhubusername/ecom-web:v1`.
-   - **Outcome**: Your web application Docker image is now available on Docker Hub.
+##### 2. Building and Pushing Docker Image
+- Use the Dockerfile to build your web application's image. Then, push this image to a container registry, such as Docker Hub, to make it distributable.
 
 #### B. Database Containerization
+- Choose an official database image that fits your e-commerce site's requirements. Prepare any necessary database initialization scripts that are compatible with container orchestration services (like Kubernetes) for the initial setup.
 
-- **Database Preparation**: Instead of containerizing the database yourself, you'll use the official MariaDB image. Prepare the database initialization script (`db-load-script.sql`) to be used with Kubernetes ConfigMaps or as an entrypoint script.
-
-```markdown
-> **Note:** The instructions outlined above are meant to guide you through the process of containerizing and deploying this e-commerce application. However, these steps are not prescriptive. You are encouraged to adapt, modify, or even completely rethink these steps to better suit your specific project requirements and deployment strategies. Exploring alternative approaches is highly recommended to find the best fit for your needs.
-```
 ### Step 3: Set Up Kubernetes on a Public Cloud Provider
 
 - **Cluster Creation**: Choose AWS (EKS), Azure (AKS), or GCP (GKE) and follow their documentation to create a Kubernetes cluster. Ensure you have `kubectl` configured to interact with your cluster.
