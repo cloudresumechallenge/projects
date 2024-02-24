@@ -35,6 +35,7 @@ Before you embark on this journey, ensure you are equipped with:
 - **Cloud Provider Account**: Access to AWS, Azure, or GCP for creating a Kubernetes cluster.
 - **GitHub Account**: For version control and implementing CI/CD pipelines.
 - **E-commerce Application Source Code and DB Scripts**: Available at [kodekloudhub/learning-app-ecommerce](https://github.com/kodekloudhub/learning-app-ecommerce). Familiarize yourself with the application structure and database scripts provided.
+- Checkout the KodeKloud's [Kubernetes Crash Course](https://youtu.be/XuSQU5Grv1g?si=olZkiQ7r9pqqwi5l).
 
 ## Step-by-Step Implementation
 
