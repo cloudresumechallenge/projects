@@ -89,10 +89,10 @@ Before you embark on this journey, ensure you are equipped with:
 
 **Task**: Prepare for a marketing campaign expected to triple traffic.
 
-1. **Evaluate Current Load**: Use `kubectl get pods` to assess the current number of running pods.
-2. **Scale Up**: Increase replicas in your deployment or use `kubectl scale deployment/ecom-web --replicas=6` to handle the increased load.
-3. **Monitor Scaling**: Observe the deployment scaling up with `kubectl get pods`.
-4. **Outcome**: The application scales up to handle increased traffic, showcasing Kubernetes' ability to manage application scalability dynamically.
+- **Evaluate Load:** Begin with understanding your current application load, focusing on the number of active instances serving your users.
+- **Scale Up:** Adjust the number of replicas in your deployment to accommodate the expected increase in traffic, ensuring your application can handle the surge without degradation in performance.
+- **Monitor Impact:** Keep an eye on the scaling process, ensuring that the deployment successfully adapts to the new load requirements.
+- **Outcome**: The application scales up to handle increased traffic, showcasing Kubernetes' ability to manage application scalability dynamically.
 
 ### Step 8: Perform a Rolling Update
 
