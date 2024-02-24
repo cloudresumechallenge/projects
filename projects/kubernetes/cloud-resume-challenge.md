@@ -86,6 +86,12 @@ Before you embark on this journey, ensure you are equipped with:
 - **Deployment Integration:** Include this configuration in your deployment strategy, making it easy to activate the feature toggle.
 - **Outcome**: Your website should now render in dark mode, demonstrating how ConfigMaps manage application features.
 
+---
+
+Starting from Step 7, our challenge showcases the integration of various Kubernetes features such as scaling, rolling updates, rollbacks, autoscaling, health checks, and security enhancements into our web application solution. These steps demonstrate how to leverage Kubernetes' capabilities to enhance the reliability, scalability, overall performance, and security of the application in a dynamic environment.
+
+---
+
 ### Step 7: Scale Your Application
 
 **Task**: Prepare for a marketing campaign expected to triple traffic.
