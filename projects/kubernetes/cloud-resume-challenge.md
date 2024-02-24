@@ -67,7 +67,8 @@ Before you embark on this journey, ensure you are equipped with:
 
 ### Step 4: Deploy Your Website to Kubernetes
 
-- **Kubernetes Deployment**: Create a `website-deployment.yaml` defining a Deployment that uses the Docker image created in Step 1A. Ensure the Deployment specifies the necessary environment variables and mounts for the database connection.
+- **Kubernetes Deployment**: Deploying your website to Kubernetes involves encapsulating your web application within a managed environment, utilizing the Docker image previously created. This step ensures your application benefits from Kubernetes' orchestration capabilities, such as automated scaling and self-healing. The deployment configuration will reference your Docker image and detail how your application connects to its database.
+
 - **Outcome**: The e-commerce web application is running on Kubernetes, with pods managed by the Deployment.
 
 ### Step 5: Expose Your Website
