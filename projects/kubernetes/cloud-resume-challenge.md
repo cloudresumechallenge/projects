@@ -73,7 +73,7 @@ Before you embark on this journey, ensure you are equipped with:
 
 ### Step 5: Expose Your Website
 
-- **Service Creation**: Define a `website-service.yaml` to create a Service of type `LoadBalancer`. This Service exposes your Deployment to the internet.
+- **Service Creation**: Craft a configuration that instructs Kubernetes to route external internet traffic to your application, ensuring users can access your e-commerce website.
 - **Outcome**: An accessible URL or IP address for your web application.
 
 ### Step 6: Implement Configuration Management
