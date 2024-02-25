@@ -49,7 +49,7 @@ Before you embark on this journey, ensure you are equipped with:
 
 ##### 1. Creating a Dockerfile for the Web App
 - This Dockerfile should base itself on a specific web server image. It must include necessary extensions, your application's source code, configurations for database connections to align with a named Kubernetes service, and the port the web server listens on for web traffic.
-  ###### Hints
+  ###### Hint
     - **Base Image**
       - Use `php:7.4-apache` as the base image.
     - **PHP mysqli Extension**
@@ -66,7 +66,9 @@ Before you embark on this journey, ensure you are equipped with:
 
 ##### 1. Creating a Dockerfile for the Database
 - Start with an official database image that suits your e-commerce site's needs. Include any initialization scripts or configurations needed by your application. These should prepare the database with the required schemas or data on startup, ensuring compatibility with Kubernetes for orchestration.
-- 
+  ###### Hint
+    - **Database Initialization with Official MariaDB Image**
+      - Instead of containerizing the database yourself, utilize the official MariaDB image. Prepare the database initialization script (`db-load-script.sql`) to be either used with Kubernetes ConfigMaps or as an entrypoint script for database setup.
 
 ##### 2. Building and Pushing the Database Docker Image
 - After preparing the Dockerfile and any necessary scripts, build the database image. Push this image to a container registry such as Docker Hub. This step makes your database image accessible for deployment alongside your web application in any environment.
