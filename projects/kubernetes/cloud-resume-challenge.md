@@ -170,7 +170,7 @@ Add links to the Cloud Resume Challenge and KodeKloud sites as in the following.
 
 **Task**: Utilize Helm to package your application, making deployment and management on Kubernetes clusters more efficient and scalable.
 
-1. **Create Helm Chart**: Start by creating a Helm chart for your application. This involves setting up a chart directory with the necessary templates for your Kubernetes resources.
+1. **Create Helm Chart**: Start by creating a [Helm chart](https://helm.sh) for your application. This involves setting up a chart directory with the necessary templates for your Kubernetes resources.
 2. **Define Values**: Customize your application deployment by defining variables in the `values.yaml` file. This allows for flexibility and reusability of your Helm chart across different environments or configurations.
 3. **Package and Deploy**: Use Helm commands to package your application into a chart and deploy it to your Kubernetes cluster. Ensure to test your chart to verify that all components are correctly configured and working as expected.
 4. **Outcome**: Your application is now packaged as a Helm chart, simplifying deployment processes and enabling easy versioning and rollback capabilities.
@@ -181,7 +181,7 @@ For more details, follow [KodeKloud Helm Course](https://kodekloud.com/courses/h
 
 **Task**: Ensure data persistence for the MariaDB database across pod restarts and redeployments.
 
-1. **Create a PVC**: Define a PersistentVolumeClaim for MariaDB storage needs.
+1. **Create a PVC**: Define a [PersistentVolumeClaim](https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/) for MariaDB storage needs.
 2. **Update MariaDB Deployment**: Modify the deployment to use the PVC for storing database data.
 3. **Outcome**: Database data persists beyond the lifecycle of MariaDB pods, ensuring data durability.
 
@@ -189,5 +189,5 @@ For more details, follow [KodeKloud Helm Course](https://kodekloud.com/courses/h
 
 **Task**: Automate the build and deployment process using GitHub Actions.
 
-1. **GitHub Actions Workflow**: Create a `.github/workflows/deploy.yml` file to build the Docker image, push it to Docker Hub, and update the Kubernetes deployment upon push to the main branch.
+1. **GitHub Actions Workflow**: Create a [GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions) workflow to build the Docker image, push it to Docker Hub, and update the Kubernetes deployment upon push to the main branch.
 2. **Outcome**: Changes to the application are automatically built and deployed, showcasing an efficient CI/CD pipeline.
