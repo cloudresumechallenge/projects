@@ -75,7 +75,7 @@ Before you embark on this journey, ensure you are equipped with:
 
 ### Step 3: Set Up Kubernetes on a Public Cloud Provider
 
-- **Cluster Creation**: Choose AWS (EKS), Azure (AKS), or GCP (GKE) and follow their documentation to create a Kubernetes cluster. Ensure you have `kubectl` configured to interact with your cluster.
+- **Cluster Creation**: Choose [AWS (EKS)](https://docs.aws.amazon.com/eks/latest/userguide/create-cluster.html), [Azure (AKS)](https://learn.microsoft.com/en-us/azure/aks/learn/quick-kubernetes-deploy-portal), or [GCP (GKE)](https://cloud.google.com/kubernetes-engine/docs/deploy-app-cluster) and follow their documentation to create a Kubernetes cluster. Ensure you have `kubectl` configured to interact with your cluster.
 - **Outcome**: A fully operational Kubernetes cluster ready for deployment.
 
 ### Step 4: Deploy Your Website to Kubernetes
