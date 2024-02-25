@@ -48,7 +48,7 @@ Before you embark on this journey, ensure you are equipped with:
 #### A. Web Application Containerization
 
 ##### 1. Creating a Dockerfile for the Web App
-- This Dockerfile should base itself on a specific web server image. It must include necessary extensions, your application's source code, configurations for database connections to align with a named Kubernetes service, and the port the web server listens on for web traffic.
+- This [Dockerfile](https://docs.docker.com/reference/dockerfile/) should base itself on a specific web server image. It must include necessary extensions, your application's source code, configurations for database connections to align with a named Kubernetes service, and the port the web server listens on for web traffic.
   ###### Hint
     - **Base Image**
       - Use `php:7.4-apache` as the base image.
@@ -60,7 +60,7 @@ Before you embark on this journey, ensure you are equipped with:
       - Expose port `80` to allow traffic to the web server.
 
 ##### 2. Building and Pushing Docker Image
-- Use the Dockerfile to build your web application's image. Then, push this image to a container registry, such as Docker Hub, to make it distributable.
+- Use the Dockerfile to build your web application's image. Then, push this image to a container registry, such as [Docker Hub](https://docs.docker.com/get-started/04_sharing_app/), to make it distributable.
 
 #### B. Database Containerization
 
