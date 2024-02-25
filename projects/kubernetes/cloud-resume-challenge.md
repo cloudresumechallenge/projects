@@ -137,7 +137,7 @@ Starting from Step 7, our challenge showcases the integration of various Kuberne
 
 **Task**: Ensure the web application is restarted if it becomes unresponsive and doesn’t receive traffic until ready.
 
-- **Define Probes:** Integrate liveness and readiness probes into your deployment configuration. These should target specific endpoints within your application that accurately reflect its health and readiness to handle traffic.
+- **Define Probes:** Integrate [liveness and readiness probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/) into your deployment configuration. These should target specific endpoints within your application that accurately reflect its health and readiness to handle traffic.
 - **Apply Configuration Updates:** Refresh your deployment with the updated settings, introducing the probes to actively monitor the application's state.
 - **Probe Testing:** Conduct tests by simulating scenarios that would affect the application's performance or availability. Observe how Kubernetes responds to these conditions, ensuring that it restarts or withholds traffic from the application as designed.
 - **Outcome**: Kubernetes automatically restarts unresponsive pods and delays traffic to newly started pods until they're ready, enhancing the application's reliability and availability.
