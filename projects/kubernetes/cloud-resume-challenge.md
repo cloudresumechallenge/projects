@@ -49,6 +49,15 @@ Before you embark on this journey, ensure you are equipped with:
 
 ##### 1. Creating a Dockerfile for the Web App
 - This Dockerfile should base itself on a specific web server image. It must include necessary extensions, your application's source code, configurations for database connections to align with a named Kubernetes service, and the port the web server listens on for web traffic.
+  ###### Hints
+    - **Base Image**
+      - Use `php:7.4-apache` as the base image.
+    - **PHP mysqli Extension**
+      - Install the `mysqli` extension for PHP.
+    - **Application Source Code**
+      - Copy the application source code to `/var/www/html/`.
+    - **Expose Web Server Port**
+      - Expose port `80` to allow traffic to the web server.
 
 ##### 2. Building and Pushing Docker Image
 - Use the Dockerfile to build your web application's image. Then, push this image to a container registry, such as Docker Hub, to make it distributable.
@@ -57,6 +66,7 @@ Before you embark on this journey, ensure you are equipped with:
 
 ##### 1. Creating a Dockerfile for the Database
 - Start with an official database image that suits your e-commerce site's needs. Include any initialization scripts or configurations needed by your application. These should prepare the database with the required schemas or data on startup, ensuring compatibility with Kubernetes for orchestration.
+- 
 
 ##### 2. Building and Pushing the Database Docker Image
 - After preparing the Dockerfile and any necessary scripts, build the database image. Push this image to a container registry such as Docker Hub. This step makes your database image accessible for deployment alongside your web application in any environment.
@@ -77,22 +87,13 @@ Before you embark on this journey, ensure you are equipped with:
 - **Service Creation**: Craft a configuration that instructs Kubernetes to route external internet traffic to your application, ensuring users can access your e-commerce website.
 - **Outcome**: An accessible URL or IP address for your web application.
 
-### Step 6: Implement Configuration Management
-
-**Task**: Add a feature toggle to the web application to enable a "dark mode" for the website.
-
-- **Enhance Application:** Add a feature toggle in the application for "dark mode" through an environment variable.
-- **Use ConfigMaps:** Utilize ConfigMaps to manage the feature toggle's state, simplifying configuration changes.
-- **Deployment Integration:** Include this configuration in your deployment strategy, making it easy to activate the feature toggle.
-- **Outcome**: Your website should now render in dark mode, demonstrating how ConfigMaps manage application features.
-
 ---
 
 Starting from Step 7, our challenge showcases the integration of various Kubernetes features such as scaling, rolling updates, rollbacks, autoscaling, health checks, and security enhancements into our web application solution. These steps demonstrate how to leverage Kubernetes' capabilities to enhance the reliability, scalability, overall performance, and security of the application in a dynamic environment.
 
 ---
 
-### Step 7: Scale Your Application
+### Step 6: Scale Your Application
 
 **Task**: Prepare for a marketing campaign expected to triple traffic.
 
@@ -101,7 +102,7 @@ Starting from Step 7, our challenge showcases the integration of various Kuberne
 - **Monitor Impact:** Keep an eye on the scaling process, ensuring that the deployment successfully adapts to the new load requirements.
 - **Outcome**: The application scales up to handle increased traffic, showcasing Kubernetes' ability to manage application scalability dynamically.
 
-### Step 8: Perform a Rolling Update
+### Step 7: Perform a Rolling Update
 
 **Task**: Update the website to include a new promotional banner for the marketing campaign.
 
@@ -111,7 +112,7 @@ Starting from Step 7, our challenge showcases the integration of various Kuberne
 - **Monitor Deployment:** Keep an eye on the update process, ensuring it progresses without issues and that the new version is successfully deployed across all instances.
 - **Outcome**: The website updates with zero downtime, demonstrating rolling updates' effectiveness in maintaining service availability.
 
-### Step 9: Roll Back a Deployment
+### Step 8: Roll Back a Deployment
 
 **Task**: Suppose the new banner introduced a bug. Roll back to the previous version.
 
@@ -120,7 +121,7 @@ Starting from Step 7, our challenge showcases the integration of various Kuberne
 - **Confirm Rollback Success:** Ensure that the application has returned to its prior state, with stability restored and the new banner removed, thus eliminating the introduced bug.
 - **Outcome**: The application's stability is quickly restored, highlighting the importance of rollbacks in deployment strategies.
 
-### Step 10: Autoscale Your Application
+### Step 9: Autoscale Your Application
 
 **Task**: Automate scaling based on CPU usage to handle unpredictable traffic spikes.
 
@@ -130,7 +131,7 @@ Starting from Step 7, our challenge showcases the integration of various Kuberne
 - **Monitoring Scaling Effectiveness:** Keep an eye on the autoscaling process, monitoring how the HPA adjusts the number of pods in response to the current load. This observation helps verify the autoscaler's responsiveness and efficiency.
 - **Outcome**: The deployment automatically adjusts the number of pods based on CPU load, showcasing Kubernetes' capability to maintain performance under varying loads.
 
-### Step 11: Implement Liveness and Readiness Probes
+### Step 10: Implement Liveness and Readiness Probes
 
 **Task**: Ensure the web application is restarted if it becomes unresponsive and doesn’t receive traffic until ready.
 
@@ -139,7 +140,7 @@ Starting from Step 7, our challenge showcases the integration of various Kuberne
 - **Probe Testing:** Conduct tests by simulating scenarios that would affect the application's performance or availability. Observe how Kubernetes responds to these conditions, ensuring that it restarts or withholds traffic from the application as designed.
 - **Outcome**: Kubernetes automatically restarts unresponsive pods and delays traffic to newly started pods until they're ready, enhancing the application's reliability and availability.
 
-### Step 12: Utilize ConfigMaps and Secrets
+### Step 11: Utilize ConfigMaps and Secrets
 
 **Task**: Securely manage the database connection string and feature toggles without hardcoding them in the application.
 
@@ -147,7 +148,7 @@ Starting from Step 7, our challenge showcases the integration of various Kuberne
 2. **Update Deployment**: Reference the Secret and ConfigMap in the deployment to inject these values into the application environment.
 3. **Outcome**: Application configuration is externalized and securely managed, demonstrating best practices in configuration and secret management.
 
-### Step 13: Document Your Process
+### Step 12: Document Your Process
 
 1. **Finalize Your Project Code**: Ensure your project is complete and functioning as expected. Test all features locally and document all dependencies clearly.
 2. **Create a Git Repository**: Create a new repository on your preferred git hosting service (e.g., GitHub, GitLab, Bitbucket).
