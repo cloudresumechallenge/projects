@@ -146,7 +146,7 @@ Starting from Step 7, our challenge showcases the integration of various Kuberne
 
 **Task**: Securely manage the database connection string and feature toggles without hardcoding them in the application.
 
-1. **Create Secret and ConfigMap**: For sensitive data like DB credentials, use a Secret. For non-sensitive data like feature toggles, use a ConfigMap.
+1. **Create Secret and ConfigMap**: For sensitive data like DB credentials, use a [Secret](https://kubernetes.io/docs/concepts/configuration/secret/). For non-sensitive data like feature toggles, use a [ConfigMap](https://kubernetes.io/docs/concepts/configuration/configmap/).
 2. **Update Deployment**: Reference the Secret and ConfigMap in the deployment to inject these values into the application environment.
 3. **Outcome**: Application configuration is externalized and securely managed, demonstrating best practices in configuration and secret management.
 
