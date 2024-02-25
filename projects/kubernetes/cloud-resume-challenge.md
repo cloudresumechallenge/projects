@@ -91,7 +91,7 @@ Before you embark on this journey, ensure you are equipped with:
 
 ---
 
-Starting from Step 7, our challenge showcases the integration of various Kubernetes features such as scaling, rolling updates, rollbacks, autoscaling, health checks, and security enhancements into our web application solution. These steps demonstrate how to leverage Kubernetes' capabilities to enhance the reliability, scalability, overall performance, and security of the application in a dynamic environment.
+Starting from Step 6, our challenge showcases the integration of various Kubernetes features such as scaling, rolling updates, rollbacks, autoscaling, health checks, and security enhancements into our web application solution. These steps demonstrate how to leverage Kubernetes' capabilities to enhance the reliability, scalability, overall performance, and security of the application in a dynamic environment.
 
 ---
 
