@@ -75,18 +75,18 @@ Before you embark on this journey, ensure you are equipped with:
 
 ### Step 3: Set Up Kubernetes on a Public Cloud Provider
 
-- **Cluster Creation**: Choose [AWS (EKS)](https://docs.aws.amazon.com/eks/latest/userguide/create-cluster.html), [Azure (AKS)](https://learn.microsoft.com/en-us/azure/aks/learn/quick-kubernetes-deploy-portal), or [GCP (GKE)](https://cloud.google.com/kubernetes-engine/docs/deploy-app-cluster) and follow their documentation to create a Kubernetes cluster. Ensure you have `kubectl` configured to interact with your cluster.
+- **Cluster Creation**: Choose [AWS (EKS)](https://docs.aws.amazon.com/eks/latest/userguide/create-cluster.html), [Azure (AKS)](https://learn.microsoft.com/en-us/azure/aks/learn/quick-kubernetes-deploy-portal), or [GCP (GKE)](https://cloud.google.com/kubernetes-engine/docs/deploy-app-cluster) and follow their documentation to create a Kubernetes cluster. Ensure you have [`kubectl`](https://kubernetes.io/docs/reference/kubectl/) configured to interact with your cluster.
 - **Outcome**: A fully operational Kubernetes cluster ready for deployment.
 
 ### Step 4: Deploy Your Website to Kubernetes
 
-- **Kubernetes Deployment**: Deploying your website to Kubernetes involves encapsulating your web application within a managed environment, utilizing the Docker image previously created. This step ensures your application benefits from Kubernetes' orchestration capabilities, such as automated scaling and self-healing. The deployment configuration will reference your Docker image and detail how your application connects to its database.
+- **Kubernetes Deployment**: Deploying your website to Kubernetes involves encapsulating your web application within a managed environment, utilizing the Docker image previously created. This step ensures your application benefits from Kubernetes' orchestration capabilities, such as automated scaling and self-healing. The [deployment configuration](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) will reference your Docker image and detail how your application connects to its database.
 
 - **Outcome**: The e-commerce web application is running on Kubernetes, with pods managed by the Deployment.
 
 ### Step 5: Expose Your Website
 
-- **Service Creation**: Craft a configuration that instructs Kubernetes to route external internet traffic to your application, ensuring users can access your e-commerce website.
+- **Service Creation**: Craft a [kubernetes service configuration](https://kubernetes.io/docs/tutorials/kubernetes-basics/expose/expose-intro/) that instructs Kubernetes to route external internet traffic to your application, ensuring users can access your e-commerce website.
 - **Outcome**: An accessible URL or IP address for your web application.
 
 ---
