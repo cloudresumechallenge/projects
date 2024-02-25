@@ -68,7 +68,7 @@ Before you embark on this journey, ensure you are equipped with:
 - Start with an official database image that suits your e-commerce site's needs. Include any initialization scripts or configurations needed by your application. These should prepare the database with the required schemas or data on startup, ensuring compatibility with Kubernetes for orchestration.
   ###### Hint
     - **Database Initialization with Official MariaDB Image**
-      - Instead of containerizing the database yourself, utilize the official MariaDB image. Prepare the database initialization script (`db-load-script.sql`) to be either used with Kubernetes ConfigMaps or as an entrypoint script for database setup. The method for creating the `db-load-script.sql` file is detailed in the application's source code repository, under the 'Deploy and Configure Database' section.
+      - Instead of containerizing the database yourself, utilize the official MariaDB image. Prepare the database initialization script (`db-load-script.sql`) to be either used with Kubernetes ConfigMaps or as an entrypoint script for database setup. The method for creating the `db-load-script.sql` file is detailed in the application's source code repository, under the ['Deploy and Configure Database'](https://github.com/kodekloudhub/learning-app-ecommerce?tab=readme-ov-file#deploy-and-configure-database) section.
 
 ##### 2. Building and Pushing the Database Docker Image
 - After preparing the Dockerfile and any necessary scripts, build the database image. Push this image to a container registry such as Docker Hub. This step makes your database image accessible for deployment alongside your web application in any environment.
