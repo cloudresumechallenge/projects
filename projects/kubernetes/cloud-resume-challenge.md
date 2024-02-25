@@ -100,7 +100,7 @@ Starting from Step 7, our challenge showcases the integration of various Kuberne
 **Task**: Prepare for a marketing campaign expected to triple traffic.
 
 - **Evaluate Load:** Begin with understanding your current application load, focusing on the number of active instances serving your users.
-- **Scale Up:** Adjust the number of replicas in your deployment to accommodate the expected increase in traffic, ensuring your application can handle the surge without degradation in performance.
+- **Scale Up:** Adjust the number of [replicas](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) in your deployment to accommodate the expected increase in traffic, ensuring your application can handle the surge without degradation in performance.
 - **Monitor Impact:** Keep an eye on the scaling process, ensuring that the deployment successfully adapts to the new load requirements.
 - **Outcome**: The application scales up to handle increased traffic, showcasing Kubernetes' ability to manage application scalability dynamically.
 
@@ -110,7 +110,7 @@ Starting from Step 7, our challenge showcases the integration of various Kuberne
 
 - **Update Application:** Revise your web application to feature the new promotional banner, aligning with your marketing strategy.
 - **Refresh Docker Image:** After updating the application, create a new Docker image to reflect these changes, tagging it as a new version to differentiate it from the previous one.
-- **Deploy Updated Version:** Apply the updated version to your deployment, initiating a rolling update. This method ensures a seamless transition with no downtime, as new instances replace the old ones gradually.
+- **Deploy Updated Version:** Apply the updated version to your deployment, initiating a [rolling update](https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/). This method ensures a seamless transition with no downtime, as new instances replace the old ones gradually.
 - **Monitor Deployment:** Keep an eye on the update process, ensuring it progresses without issues and that the new version is successfully deployed across all instances.
 - **Outcome**: The website updates with zero downtime, demonstrating rolling updates' effectiveness in maintaining service availability.
 
@@ -119,7 +119,7 @@ Starting from Step 7, our challenge showcases the integration of various Kuberne
 **Task**: Suppose the new banner introduced a bug. Roll back to the previous version.
 
 - **Identify Issue:** Notice an issue post-deployment through monitoring tools or user feedback, indicating a negative impact on the user experience.
-- **Initiate Rollback:** Revert to the previous version of your deployment. This action undoes the recent update, restoring the application to its former state before the problematic changes were introduced.
+- **Initiate Rollback:** [Revert to the previous version of your deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#rolling-back-a-deployment). This action undoes the recent update, restoring the application to its former state before the problematic changes were introduced.
 - **Confirm Rollback Success:** Ensure that the application has returned to its prior state, with stability restored and the new banner removed, thus eliminating the introduced bug.
 - **Outcome**: The application's stability is quickly restored, highlighting the importance of rollbacks in deployment strategies.
 
@@ -127,7 +127,7 @@ Starting from Step 7, our challenge showcases the integration of various Kuberne
 
 **Task**: Automate scaling based on CPU usage to handle unpredictable traffic spikes.
 
-- **Setup Autoscaling:** Introduce a Horizontal Pod Autoscaler (HPA) configured to maintain around 50% CPU utilization across your application pods. Define a range for the number of pods allowed, setting a minimum and maximum to ensure resource availability aligns with demand.
+- **Setup Autoscaling:** Introduce a [Horizontal Pod Autoscaler (HPA)](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) configured to maintain around 50% CPU utilization across your application pods. Define a range for the number of pods allowed, setting a minimum and maximum to ensure resource availability aligns with demand.
 - **Implement HPA:** Apply the autoscaling configuration to your deployment, specifying the desired CPU utilization percentage and pod count limits. This ensures your application scales up or down automatically based on real-time CPU usage.
 - **Traffic Load Simulation:** Generate increased traffic to your application, using load testing tools. This spike in usage will trigger the autoscaling mechanism, pushing the CPU usage beyond the defined threshold.
 - **Monitoring Scaling Effectiveness:** Keep an eye on the autoscaling process, monitoring how the HPA adjusts the number of pods in response to the current load. This observation helps verify the autoscaler's responsiveness and efficiency.
