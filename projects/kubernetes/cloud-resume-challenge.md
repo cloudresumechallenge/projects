@@ -34,6 +34,7 @@ Before you embark on this journey, ensure you are equipped with:
 - **Docker and Kubernetes CLI Tools**: Essential for building, pushing Docker images, and managing Kubernetes resources.
 - **Cloud Provider Account**: Access to AWS, Azure, or GCP for creating a Kubernetes cluster.
 - **GitHub Account**: For version control and implementing CI/CD pipelines.
+- **Kubernetes Crash Course**: This [free course](https://kodekloud.com/pages/kubernetes-crash-course?utm_source=cloudresumechallenge.dev&utm_medium=referral&utm_campaign=cloud_resume_challenge_kube_crash_course) from KodeKloud contains a number of helpful labs to get you familiar with K8s basics.
 - **E-commerce Application Source Code and DB Scripts**: Available at [kodekloudhub/learning-app-ecommerce](https://github.com/kodekloudhub/learning-app-ecommerce). Familiarize yourself with the application structure and database scripts provided.
 
 ## Step-by-Step Implementation
