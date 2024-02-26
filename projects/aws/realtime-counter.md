@@ -17,12 +17,12 @@ This challenge assumes that the challenger has already done the original cloud r
 3. Create a new WebSocket API Gateway, a new Lambda function (refer to this as `DBUpdater`), and a new DynamoDB table (refer to this as `ConnectionIDs`).
 4. Write your web app to connect to this WebSocket API Gateway upon loading. You can learn how to use WebSocket in your JavaScript web app in [this MDN documentation on WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket). This should be useful for Step 10, too.
 5. Route WebSocket's `$connect` and `$disconnect` routes to `DBUpdater`. You can read about AWS WebSocket Routes in this [AWS Documentation on WebSocket API routes](https://docs.aws.amazon.com/apigateway/latest/developerguide/websocket-api-develop-routes.html). 
-6. `DBUpdater`, upon $connect, should write the connection ID of the web socket connection from the web app to the `ConnectionIDs` table, and increase the visitor count in the `VisitorCount` table. Upon $disconnect, the function should only delete the connection's ID from connectionID. [Hint: You might want to play around the event sent to `DBUpater` from WebSocket]
+6. `DBUpdater`, upon $connect, should write the connection ID of the web socket connection from the web app to the `ConnectionIDs` table, and increase the visitor count in the `VisitorCount` table. Upon $disconnect, the function should only delete the connection's ID from connectionID. [Hint: You might want to play around the event sent to `DBUpdater` from WebSocket]
 7. Enable DynamoDB Steam in the `VisistorCount` table. Therefore, a visitor will trigger this DynamoDB Stream because DBUpdater modifies the visitor count inside the table. Read more about DynamoDB Stream in [this official documentation](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.html).
 8. Create another Lambda Function (refer to this as DBStreamProcessor), and make the DynamoDB Stream to invoke this DBStreamProcessor.
 9. DBStreamProcessor should scan the connection IDs inside the `ConnectionIDs` table and send the updated count through WebSocket. I used NodeJS for this Lambda function because the official SDK support non-blocking functions. Here is the AWS official NodeJS SDK on [DynamoDB](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/dynamodb/command/ScanCommand/) and [WebSocket](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/apigatewaymanagementapi/).
 10. Update your web app to listen to the socket and display the updated count!
-11. Write a short blog on the programming languages and the SDKs you use in the Lambda functions and what you learn about what web sockets are capable of.
+11. Write a short blog on the programming languages and the SDKs you used in the Lambda functions and what you learned about the capabilities of web sockets.
 
 ## Conclusion
 
